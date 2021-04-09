@@ -1,0 +1,39 @@
+server:
+  port: 8084
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+# 打印sql
+logging:
+  level:
+    com.tj: debug
+  file:
+    path: ./logs
+
+image:
+  linux:
+    upload: /mnt/data/shukong/docker/nginx/data/html/yangjing-images
+
+#图片展示路径
+web:
+  image:
+    path: https://mlyj.pudong.gov.cn:8082/yangjing-images/
+
+file-excel:
+  linux:
+    export-path: C:\
+    path: https://mlyj.pudong.gov.cn:8082/export/
+  window:
+    template-path: E:\Tj个人\universal\src\main\resources\template\

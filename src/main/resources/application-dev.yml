@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    name: dataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/universal?characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useUnicode=true&useSSL=false
+    username: root
+    password:
+
